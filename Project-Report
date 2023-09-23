@@ -1,1 +1,1205 @@
-For this project's report contact me @ salmansharieffy@gmail.com
+TABLE OF CONTENTS
+
+
+
+
+SL. No	
+CONTENTS	
+Pg. No
+
+1.	
+ INTRODUCTION
+1.1	User Modules
+1.2	Banker Modules
+1.3	Purpose
+1.4 Scope	
+1
+2
+2
+4
+4
+
+2.	
+ SYSTEM REQUIREMENTS
+2.1 Hardware Requirements
+2.2 Software Requirements	
+5
+6
+7
+
+3.	
+APACHE
+  3.1 PHP
+  3.2 MYSQL	
+9
+10
+11
+
+4.	
+FEASIBILITY ANALYSIS
+4.1 Economic Feasibility
+4.2 Technical Feasibility
+4.3 Operational Feasibility	
+12
+13
+13
+13
+
+5.	
+ANALYSIS AND DESIGN
+5.1 Analysis
+5.2 Disadvantage Of Present System
+5.3 Design	
+14
+15
+15
+16
+
+6.	
+UML DIAGRAMS
+6.1 Actor
+6.2 Usecase Diagrams
+6.3 Banker (Use Case Diagram)
+6.4 Subbanker (Use Case Diagram)
+6.5 User (Use Case Diagram)
+6.6 Class Diagram	
+17
+18
+19
+20
+21
+22
+23
+
+7.	
+ER DIAGRAMS
+7.1 ER Notation
+7.2 Existence
+7.3 ER Diagrams	
+24
+26
+27
+28
+
+8.	
+MYSQL DATA TABLES
+8.1 Assign Locker Table
+8.2 Banker Details Table
+8.3 Locker Type Table
+8.4 Website Page Table	
+29
+30
+30
+31
+31
+
+9.	
+DATA FLOW DIAGRAMS
+9.1 Zero Level DFD
+9.2 First Level DFD
+9.3 Second Level DFD
+	
+32
+35
+36
+37
+
+10.	
+IMPLEMENTATION AND SYSTEM TESTING
+10.1 System Testing
+10.2 Unit Testing
+10.3 Integration Testing
+	
+39
+
+40
+40
+41
+
+          11.	
+ SOURCE CODE	
+         42
+
+          12.	
+   PROJECT SCREENSHOTS
+
+	
+         56
+
+          13.	
+   CONCLUSION
+
+	
+         72
+
+          14.	
+   FUTURE ENHANCEMENT
+
+	
+         74
+
+          15.	
+   BIBLIOGRAPHY
+
+	
+         75
+ 
+
+
+
+
+
+
+
+                                 INTRODUCTION
+
+
+
+
+
+
+
+
+Introduction
+Bank Locker Management System is a web based application which deals with bank lockers which stores valuables things of bank customers. All details of lockers are saved in database. This project is developed using PHP with MySQLi extension.
+This project has three modules i.e. Banker, Sub-banker and User
+User Modules
+In this project user is those who have locker in bank. With the help of locker number user can see the details of lockers.
+
+Banker Modules
+Dashboard: In this section, Banker briefly views the Total assign lockers, Total Sub-Banker and Total Locker Type.
+Sub-Banker: In this section, banker manage sub-banker (Add/Update/Delete).
+Locker-Type: In this section, banker mange locker type (Add/Update/Delete).
+Assign Locker: In this section, banker assign the locker to customers or users with providing unique locker number and key number of lockers through locker number users or customer can view the details of their locker.
+Reports: In this section, two reports are available.
+	B/w Dates Report: Banker can view a number of assign lockers in particular periods.
+	Search Report:  Banker can search locker details by using Locker Number/Key Number.
+
+Pages: In this Section, Admin can manage the content of about us and contact us pages.
+Account Settings:
+	Profile: In this section, admin can update his/her profile.
+	Change Password: In this section admin can change his/her own passwords
+	Logout: Through this button admin can log out.
+
+Sub-Banker Module
+Sub-Banker and Banker features are the same except Sub-Banker creation. Sub-Banker can’t create the Sub-Banker.
+
+
+
+
+
+
+
+Purpose
+The main purpose of the  "Bank Locker Management System" is to offers better solution for bank security system.  It manages  all the  information  about  assign bank locker.  Banks offers locker facilities to individuals at vey small annual fee. These lockers are maintained in a secure facility that is under constant surveillance and security. 
+Scope
+The Software design document would demonstrate how the design will accomplish the functional and non- functional requirements captured in the Software Requirement specification (SRS). The document will provide a framework to the programmers through describing the high level components and architecture, sub systems, interfaces, database design and algorithm design. This is achieved through the use of architectural patterns, design patterns, sequence diagrams, class diagrams, relational models and user interfaces
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SYSTEM REQUIREMENT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HARDWARE REQUIREMENTS
+
+Hardware Configuration :
+
+Client Side:
+RAM RAMfgdfRA      RAM	512 MB 
+	
+Hard disk	10 GB
+	
+Processor	1.0 GHz
+	
+
+Server side:
+RAM	1 GB
+Hard disk	20 GB
+Processor	2.0 GHz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SOFTWARE REQUIREMENTS
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Software Requirement:
+
+Client Side:
+
+
+Web Browser	Google Chrome or any compatible browser
+Operating System	Windows or any equivalent OS
+
+
+Server Side:
+
+Web Server	APACHE
+Server side Language	PHP5.6 or above version
+Database Server	MYSQL
+Web Browser	Google Chrome or any compatible browser
+Operating System	Windows or any equivalent OS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                         APACHE
+
+
+
+
+
+
+
+
+
+
+APACHE
+The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
+The Apache HTTP Server ("httpd") was launched in 1995 and it has been the most popular web server on the Internet since April 1996. It has celebrated its 20th birthday as a project in February 2015.
+
+PHP
+•	PHP stands for PHP: Hypertext Preprocessor.
+
+•	PHP is a server-side scripting language, like ASP.
+•	PHP scripts are executed on the server.
+•	PHP supports many databases (MYSQL, Informix, Oracle, Sybase, Solid, Generic ODBC, etc.).
+
+•	PHP is an open source software .
+•	PHP is free to download and use.
+
+MYSQL
+•	MYSQL is a database server
+•	MYSQL is ideal for both small and large applications 
+•	MYSQL supports standard SQL
+•	MYSQL compiles on a number of platforms 
+•	MYSQL is free to download and use
+•	How to access MySQL: http://localhost/phpmyadmin
+
+
+
+
+
+
+
+
+
+
+
+
+                   FEASIBILITY ANALYSIS
+
+
+
+
+
+
+Feasibility analysis
+The analysis of the requirement has lead to a conclusion that the project is feasible with respect to time and cost. The data collection from the field is assured by the client to provide. The technology used to develop is almost Open Source, therefore less cost for implementation and maintenance will be involved. A feasibility study is an analysis used in measuring the ability and likelihood to    complete a project successfully including all relevant factors. It must account for factors that affect it such as economic, technological and time factors. It is used to assess the strengths and weaknesses of a proposed project and present directions of activities which will improve a project and achieve desired results.
+Economic feasibility
+The purpose of economic feasibility assessment is to determine the positive economic benefits to the organization that the proposed system will provide. The assessment typically involves a cost/benefits analysis.
+
+Technical feasibility
+Technical analysis is a trading tool employed to evaluate securities and attempt to forecast the future movement. I am using java language and other tools like net beans to develop the software.
+ Operational feasibility
+Operational feasibility is a measure of how well proposed system solves the problems, and takes advantage of the opportunities identified during scope definition and how it satisfies the requirements analysis phase of the system development.
+
+
+
+
+
+          
+ANALYSIS AND DESIGN
+
+
+
+
+
+
+Analysis and Design
+Analysis:
+In present all doctor appointment work done on the paper. The whole year data is stored in the registers. We can’t generate reports as per our requirements because its take more time to calculate report of doctor appointments.
+Disadvantage of present system:
+•	Not user friendly:  The present system not user friendly because data is not stored in structure and proper format.
+•	Manual Control: All report calculation is done manually so there is a chance of error. 
+•	Lots of paper work: Visitors maintain in the register so lots of paper require storing details.
+•	Time consuming 
+
+
+Design Introduction:
+Design is the first step in the development phase for any techniques and principles for the purpose of defining a device, a process or system in sufficient detail to permit its physical realization.
+Once the software requirements have been analyzed and specified the software design involves three technical activities - design, coding, implementation and testing that are required to build and verify the software.
+The design activities are of main importance in this phase, because in this activity, decisions ultimately affecting the success of the software implementation and its ease of maintenance are made. These decisions have the final bearing upon reliability and maintainability of the system. Design is the only way to accurately translate the customer’s requirements into finished software or a system.
+Design is the place where quality is fostered in development. Software design is a process through which requirements are translated into a representation of software. Software design is conducted in two steps. Preliminary design is concerned with the transformation of requirements into data
+
+
+
+
+
+
+
+
+
+
+
+
+
+UML DIAGRAMS
+
+
+
+
+
+
+
+
+
+
+
+UML Diagrams:
+Actor:
+	A coherent set of roles that users of use cases play when interacting with the use `cases.
+
+
+
+Use case:A description of sequence of actions, including variants, that a system performs that yields an observable result of value of an actor.
+
+
+
+
+UML stands for Unified Modeling Language. UML is a language for specifying, visualizing and documenting the system. This is the step while developing any product after analysis. The goal from this is to produce a model of the entities involved in the project which later need to be built. The representation of the entities that are to be used in the product being developed need to be designed.
+
+USECASE DIAGRAMS:
+Use case diagrams model behavior within a system and helps the developers understand of what the user require. The stick man represents what’s called an actor.
+Use case diagram can be useful for getting an overall view of the system and clarifying who can do and more importantly what they can’t do.
+Use case diagram consists of use cases and actors and shows the interaction between the use case and actors.
+•	The purpose is to show the interactions between the use case and actor.
+•	To represent the system requirements from user’s perspective.
+•	An actor could be the end-user of the system or an external system.
+USECASE DIAGRAM: A Use case is a description of set of sequence of actions.  Graphically it is rendered as an ellipse with solid line including only its name.  Use case diagram is a behavioral diagram that shows a set of use cases and actors and their relationship.  It is an association between the use cases and actors.  An actor represents a real-world object.  Primary Actor – Sender, Secondary Actor Receiver.
+Use Case Diagrams:
+Banker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sub-Banker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+User
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Class Diagram:
+A description of set of objects that share the same attributes operations, relationships, and semantics.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ER DIAGRAMS
+
+
+
+
+
+
+
+
+
+
+
+
+ER Diagram:
+The Entity-Relationship (ER) model was originally proposed by Peter in 1976 [Chen76] as a way to unify the network and relational database views. Simply stated the ER model is a conceptual data model that views the real world as entities and relationships. A basic component of the model is the Entity-Relationship diagram which is used to visually represent data objects. Since Chen wrote his paper the model has been extended and today it is commonly used for database design for the database designer, the utility of the ER model is:
+•	It maps well to the relational model. The constructs used in the ER model can easily be transformed into relational tables.
+•	It is simple and easy to understand with a minimum of training. Therefore, the model can be used by the database designer to communicate the design to the end user.
+•	In addition, the model can be used as a design plan by the database developer to implement a data model in specific database management software.
+ER Notation
+There is no standard for representing data objects in ER diagrams. Each modeling methodology uses its own notation. The original notation used by Chen is widely used in academics texts and journals but rarely seen in either CASE tools or publications by non-academics. Today, there are a number of notations used; among the more common are Bachman, crow's foot, and IDEFIX.
+All notational styles represent entities as rectangular boxes and relationships as lines connecting boxes. Each style uses a special set of symbols to represent the cardinality of a connection. The notation used in this document is from Martin. The symbols used for the basic ER constructs are:
+•	Entities are represented by labeled rectangles. The label is the name of the entity. Entity names should be singular nouns.
+•	Relationships are represented by a solid line connecting two entities. The name of the relationship is written above the line. Relationship names should be verbs
+•	Attributes, when included, are listed inside the entity rectangle. Attributes which are identifiers are underlined. Attribute names should be singular nouns.
+•	Cardinality of many is represented by a line ending in a crow's foot. If the crow's foot is omitted, the cardinality is one.
+Existence is represented by placing a circle or a perpendicular bar on the line. Mandatory existence is shown by the bar (looks like a 1) next to the entity for an instance is required. Optional existence is shown by placing a circle next to the entity that is optional.
+
+
+
+
+
+
+
+
+
+
+
+
+ER Diagram
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+MySQL Data Tables
+
+
+
+
+
+
+
+
+
+
+
+
+MySQL Data Tables
+ Assign Locker Table:(Table name is tblassignlocker)
+ This store the details of lockers holders and their locker.
+ 
+ Banker details table(Table name is tblbanker)
+ This table stores the bankers and sub banker details.
+ 
+Locker type Table: (Table name is tbllockertype)
+This table stores the locker type available in the bank.
+ 
+
+Website page Table: (Table name is tblpage)
+This table stores the details of website.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DATA FLOW DIAGRAMS
+
+
+
+
+
+
+
+
+
+
+Data Flow Diagrams
+A Data Flow Diagram (DFD) is a traditional visual representation of the information flows within a system. A neat and clear DFD can depict the right amount of the system requirement graphically. It can be manual, automated, or a combination of both.
+It shows how data enters and leaves the system, what changes the information, and where data is stored.
+The objective of a DFD is to show the scope and boundaries of a system as a whole. It may be used as a communication tool between a system analyst and any person who plays a part in the order that acts as a starting point for redesigning a system. The DFD is also called as a data flow graph or bubble chart.
+The following observations about DFDs are essential:
+1.	All names should be unique. This makes it easier to refer to elements in the DFD.
+2.	Remember that DFD is not a flow chart. Arrows is a flow chart that represents the order of events; arrows in DFD represents flowing data. A DFD does not involve any order of events.
+3.	Suppress logical decisions. If we ever have the urge to draw a diamond-shaped box in a DFD, suppress that urge! A diamond-shaped box is used in flow charts to represents decision points with multiple exists paths of which the only one is taken. This implies an ordering of events, which makes no sense in a DFD.
+4.	Do not become bogged down with details. Defer error conditions and error handling until the end of the analysis.
+Standard symbols for DFDs are derived from the electric circuit diagram analysis and are shown in fig:
+ 
+Circle: A circle (bubble) shows a process that transforms data inputs into data outputs.
+Data Flow: A curved line shows the flow of data into or out of a process or data store.
+Data Store: A set of parallel lines shows a place for the collection of data items. A data store indicates that the data is stored which can be used at a later stage or by the other processes in a different order. The data store can have an element or group of elements.
+Source or Sink: Source or Sink is an external entity and acts as a source of system inputs or sink of system outputs.
+
+
+Zero Level DFD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+First Level DFD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Second Level DFD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                Implementation and System Testing
+
+
+
+
+
+
+
+
+Implementation and System Testing
+After all phase have been perfectly done, the system will be implemented to the server and the system can be used.
+
+System Testing
+
+The goal of the system testing process was to determine all faults in our project .The program was subjected to a set of test inputs and many explanations were made and based on these explanations it will be decided whether the program behaves as expected or not. Our Project went through two levels of testing
+1. Unit testing
+2. Integration testing
+
+UNIT TESTING
+Unit testing is commenced when a unit has been created and effectively reviewed .In order to test a single module we need to provide a complete environment i.e. besides the section we would require
+•	The procedures belonging to other units that the unit under test calls
+•	Non local data structures that module accesses
+•	A procedure to call the functions of the unit under test with appropriate parameters
+
+1. Test for the admin module
+
+•	Testing admin login form-This form is used for log in of administrator of the system. In this form we enter the username and password if both are correct administration page will open otherwise if any of data is wrong it will get redirected back to the login page and again ask the details.
+•	Report Generation: admin can generate report from the main database.
+
+INTEGRATION TESTING
+
+In the Integration testing we test various combination of the project module by providing the input.
+The primary objective is to test the module interfaces in order to confirm that no errors are occurring when one module invokes the other module.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SOURCE CODE
+
+
+
+
+
+
+
+SOURCE CODE
+<?php
+include('banker/includes/config.php');
+session_start();
+error_reporting(0);
+
+?>
+
+<!DOCTYPE HTML>
+<html lang="zxx">
+<head>
+<title>Bank Locker Management System | Home</title>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--// Meta tag Keywords -->
+<!-- css files -->
+<link href="css1/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> <!-- Bootstrap-Core-CSS -->
+<link href="css1/style.css" rel="stylesheet" type="text/css" media="all" /> <!-- Style-CSS -->
+<link rel="stylesheet" href="css1/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<link rel="stylesheet" href="css1/flexslider.css" type="text/css" media="all" /> <!-- Banner-Slider-CSS -->
+<!-- //css files -->
+<link rel="stylesheet" type="text/css" href="css1/demo.css"/>
+<!-- online-fonts -->
+<link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Ubuntu+Condensed&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext" rel="stylesheet">
+<!-- //online-fonts -->
+</head>
+<body>
+
+<?php include_once("includes/header.php");?>
+
+
+<!-- //banner section -->
+<!-- about -->
+<div class="about" id="about">
+<div class="container">
+<h3 class="w3l-title"><span>About</span> Us</h3>
+<div class="w3-agileits-about-grids">
+<div class="col-md-5 agile-about-right">
+<img src="images1/3.png" alt="" />
+</div>
+<div class="col-md-7 agile-about-left">
+<?php
+
+$ret=mysqli_query($con,"select * from tblpage where PageType='aboutus' ");
+$cnt=1;
+while ($row=mysqli_fetch_array($ret)) {
+
+?>
+<h3 class="w3l-sub">Offering the most </h3>
+<p class="sub-p">competitive rates and fees</p>
+<p class="sub-p2"><?php  echo $row['PageDescription'];?></p>
+<?php } ?>
+</div>
+<div class="clearfix"> </div>
+</div>
+</div>
+</div>
+<!-- //about -->
+
+
+<!--stats-->
+<div data-vide-bg="video/coins">
+<div class="stats center-container" id="stats">
+<div class="container">
+<div class="stats-info">
+<div class="col-md-4 col-xs-4 stats-grid slideanim">
+<i class="fa fa-user-o" aria-hidden="true"></i>
+<div class="agile-one">
+<h4 class="stats-info">Employees</h4>
+<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='12760' data-delay='.5' data-increment="1">12760</div>
+</div>
+</div>
+<div class="col-md-4 col-xs-4 stats-grid slideanim">
+<i class="fa fa-globe" aria-hidden="true"></i>
+<div class="agile-one">
+<h4 class="stats-info">Locations</h4>
+<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='12760' data-delay='.5' data-increment="1">12760</div>
+</div>
+</div>
+<div class="col-md-4 col-xs-4 stats-grid slideanim">
+<i class="fa fa-diamond" aria-hidden="true"></i>
+<div class="agile-one">
+<h4 class="stats-info">Awards Winning</h4>
+<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='12760' data-delay='.5' data-increment="1">12760</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>
+<!--//stats-->
+<!-- team -->
+
+
+<!-- mail -->
+<div class="mail" id="contact">
+<div class="container">
+<h3 class="w3l-title"><span>Contact</span> Us</h3>
+<div class="mail-w3l-agile">
+<div class="col-md-6 col-sm-6 contact-left-w3ls">
+<?php
+
+$ret=mysqli_query($con,"select * from tblpage where PageType='contactus' ");
+$cnt=1;
+while ($row=mysqli_fetch_array($ret)) {
+
+?>
+<div class="w3l-cont-mk">
+<img src="images1/img2.jpg">
+</div>
+<h3>Contact Info</h3>
+<div class="visit">
+<div class="col-md-2 col-sm-2 col-xs-2 contact-icon-wthree">
+<i class="fa fa-home" aria-hidden="true"></i>
+</div>
+<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
+<h4>Visit us</h4>
+<p><?php  echo $row['PageDescription'];?></p>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="mail-w3">
+<div class="col-md-2 col-sm-2 col-xs-2 contact-icon-wthree">
+<i class="fa fa-envelope-o" aria-hidden="true"></i>
+</div>
+<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
+<h4>Mail us</h4>
+<p><a href="mailto:info@example.com"><?php  echo $row['Email'];?></a></p>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="call">
+<div class="col-md-2 col-sm-2 col-xs-2 contact-icon-wthree">
+<i class="fa fa-phone" aria-hidden="true"></i>
+</div>
+<div class="col-md-10 col-sm-10 col-xs-10 contact-text-agileinf0">
+<h4>Call us</h4>
+<p>+<?php  echo $row['MobileNumber'];?></p>
+</div>
+<div class="clearfix"></div>
+</div>
+</div><?php } ?>
+<div class="col-md-6 col-sm-6 agileinfo_mail_grid_right">
+<h3>Assign Locker Search</h3>
+<form name="bwdatesreportds" action="search-locker-details.php" method="post">
+<div class="wthree_contact_left_grid">
+<input type="text"  id="searchinput" name="searchinput"  placeholder="Search Locker Details by Locker Number/ Key Number" required="">
+
+</div>
+<br>
+<button type="submit" class="btn btn-primary" name="submit" id="submit">Search</button>
+</form>
+</div>
+<div class="clearfix"> </div>
+</div>
+</div>
+</div>
+
+<!-- //mail -->
+<!-- footer -->
+<?php include_once("includes/footer.php");?>
+
+<!-- js files -->
+<!-- js -->
+<script type="text/javascript" src="js1/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js1/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
+<!-- //js -->
+<!-- js for banner -->
+<!-- responsiveslider -->
+<script src="js1/responsiveslides.min.js"></script>
+<script>
+// You can also use "$(window).load(function() {"
+$(function () {
+// Slideshow 4
+$("#slider3").responsiveSlides({
+auto: true,
+pager:true,
+nav:false,
+speed: 500,
+namespace: "callbacks",
+before: function () {
+$('.events').append("<li>before event fired.</li>");
+},
+after: function () {
+$('.events').append("<li>after event fired.</li>");
+}
+});
+
+});
+</script>
+<!-- //responsiveslider -->
+<!-- stats -->
+<script type="text/javascript" src="js1/numscroller-1.0.js"></script>
+<!-- //stats -->
+<!-- /js for banner -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js1/move-top.js"></script>
+<script type="text/javascript" src="js1/easing.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+$(".scroll").click(function(event){
+event.preventDefault();
+$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+});
+});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- smooth scrolling -->
+<script src="js1/SmoothScroll.min.js"></script>
+<!-- //smooth scrolling -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+$(document).ready(function() {
+/*
+var defaults = {
+containerID: 'toTop', // fading element id
+containerHoverID: 'toTopHover', // fading element hover id
+scrollSpeed: 1200,
+easingType: 'linear'
+};
+*/
+
+$().UItoTop({ easingType: 'easeOutQuart' });
+
+});
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- video-js -->
+<script src="js1/jquery.vide.min.js"></script>
+<!-- //video-js -->
+<!--gallery-js -->
+<script src="js1/jquery.picEyes.js"></script>
+<script>
+$(function(){
+//picturesEyes($('.demo li'));
+$('.demo li').picEyes();
+});
+</script>
+<!--//gallery-js -->
+<!-- //js files -->
+
+S</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Project Screen Shot
+
+
+
+
+
+
+
+
+
+Home Page
+ 
+Search Locker Details
+ 
+
+View Locker Details
+ 
+
+
+Banker or Sub Banker Login Page
+ 
+Forgot Password
+ 
+
+Dashboard
+ 
+
+Profile
+ 
+
+Change Password
+ 
+
+
+
+
+
+
+
+
+
+
+Add Sub-Banker
+ 
+Manage Sub-Banker
+ 
+
+
+
+Update Sub-Banker
+ 
+
+Add Locker Type
+ 
+
+Manage Locker Type
+ 
+
+
+
+Update Locker Type
+ 
+Assign Locker
+ 
+
+Manage Assign Locker
+ 
+Update Assign Locker 
+
+Update Image
+ 
+Between Dates Report
+ 
+
+
+
+View Between Dates Report
+ 
+
+Search Report
+ 
+
+
+View Search Report
+ 
+
+About Us Page
+ 
+
+
+Contact Us Page
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CONCLUSION
+
+
+
+
+
+
+CONCLUSION
+This Application provides a computerized version of bank lockers facility which will benefit the people who locker in bank.
+It makes entire process online and can generate reports. It has a facility of bankers login, sub-banker login where banker can manage assign lockers and generate assign lockers report.
+The application was designed in such a way that future changes can be                               done easily. The following conclusions can be deduced from the development of the project.
+•	Automation of the entire system improves the productivity.
+•	It provides a friendly graphical user interface which proves to be better when compared to the existing system.
+•	It gives appropriate access to the authorized users depending on their permissions.
+•	It effectively overcomes the delay in communications.
+•	Updating of information becomes so easier.
+•	System security, data security and reliability are the striking features.
+•	The System has adequate scope for modification in future if it is necessary.
+
+Future Enhancement
+I have tried to design the software in such a way that the user may not have any difficulty in using this system and further expansion is also possible. New requirements will be added and risk will be analyzed in every phase until the requirement of user will not be fulfilled. The most priority will be given to keep confidential data secure and easy and simple for use.
+The further enhancements which can be made in the system are:
+•	Any requirement that will make system easy to use or make a system secure, these requirement will be add using Spiral Model. Other requirement related to government or municipality will be added when required.
+•	For the identity of user and for their data integrity, digital signature can be added to this system.
+•	For the identity of user and for verification, image of user can be added to this system.
+•	There will be provision of filling form in multiple languages.
+•	A great concern will be given on frontend design which will make user to use system easily and enjoy while using this system. 
+
+
+
+Bibliography
+For PHP
+•	https://www.w3schools.com/php/default.asp
+•	https://www.sitepoint.com/php/
+•	https://www.php.net/
+
+
+For MySQL
+•	https://www.mysql.com/
+•	http://www.mysqltutorial.org
+
+For XAMPP
+•	https://www.apachefriends.org/download.html
+
+
